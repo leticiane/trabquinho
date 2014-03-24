@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+    
+    <body>
+        
+        <ui:composition template="./template.xhtml">
+            
+            <ui:define name="title">
+               Saudação
+            </ui:define>
+
+            <ui:define name="box">
+                <h4>Ola meu nome é Florentina!</h4>
+
+                <h5>Estou pensando em um número
+
+                    <br/>
+                   Entre
+                    <span class="highlight">0</span> and
+                    <span class="highlight">10</span>.</h5>
+
+                <h5>Você consegue adivinhar?</h5>
+
+                <h:form>
+                    <h:inputText size="2" maxlength="2" value="#{UserNumberBean.userNumber}" />
+                    <h:commandButton id="confirmar" value="confirmar" action="response" />
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+        
+    </body>
+</html>
